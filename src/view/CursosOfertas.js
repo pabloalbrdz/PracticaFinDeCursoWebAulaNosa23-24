@@ -1,8 +1,8 @@
 import Article from "../component/Article";
+import "./CursosOfertas.css";
 import Header from "../component/Header";
-import "./CoursesOffers.css";
 
-function CoursesOffers(){
+function CursosOfertas(){
     let array = new Array();
     for (let i=1; i<=6; i++){
         array.push(<Article title={i}></Article>);
@@ -26,8 +26,10 @@ function CoursesOffers(){
     }
 
     return(
-        <div>
-            <Header></Header>
+        <div id="cursosofertaspantalla">
+            <header>
+                <Header></Header>
+            </header>
             <main>
                 <aside>
                     asdsaysdhguy
@@ -47,4 +49,4 @@ function CoursesOffers(){
     );
 }
 
-export default CoursesOffers;
+export default CursosOfertas;
