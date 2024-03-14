@@ -1,17 +1,18 @@
-import Article from "../component/Article";
+import Articulo from "../component/Articulo";
 import "./CursosOfertas.css";
 import Header from "../component/Header";
+import Footer from "../component/Footer";
 
 function CursosOfertas(){
 
     let array = new Array();
     for (let i=1; i<=6; i++){
-        array.push(<Article title={i}></Article>);
+        array.push(<Articulo title={i}></Articulo>);
     }
 
     let ofertascursos = new Array();
     for (let i=1; i<=40; i++){
-        ofertascursos.push(<Article title={i}></Article>);
+        ofertascursos.push(<Articulo title={i}></Articulo>);
     }
     
     let pagina = 0;
@@ -27,25 +28,22 @@ function CursosOfertas(){
     }
 
     return(
-        <div id="cursosofertaspantalla" className="row">
-            <header className="col-12">
-                <Header></Header>
-            </header>
-            <main className="col-12 d-flex flex-row mt-1">
-                <aside className="col-2">
+        <div id="cursosofertaspantalla" className="row vw-100">
+            <Header></Header>
+            <main id="cursosofertaspantallaMain" className="col-12 d-flex flex-row mt-1">
+                <aside id="aside1" className="col-2 mt-3 h-100">
                     Aside Barra Busqueda
                 </aside>
-                <section className="col-10">
+                <section className="col-10 mt-5">
                     <div className="d-flex flex-column gap-2">
                         {array}
                     </div>
-                    <div id="paginacionCursosOfertas">
+                    <div id="paginacionCursosOfertas" className="mt-3">
                         {pags}
                     </div>
                 </section>
-
             </main>
-            <footer></footer>
+            <Footer></Footer>
         </div>
     );
 }

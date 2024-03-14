@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import AulaNosaLogo from '../assets/img/logo.png';
+import "./Header.css"
 
 function Header() {
   return (

@@ -1,6 +1,6 @@
-import "./Article.css";
+import "./Articulo.css";
 
-function Article ({title}){
+function Articulo ({title}){
     return(
         <div className="article-div">
             <h2>{title}</h2>
@@ -8,4 +8,4 @@ function Article ({title}){
     );
 }
 
-export default Article;
+export default Articulo;
