@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import aulanosaLogo from '../img/logo2.png';
+import aulanosaLogo from '../assets/img/logo.png';
 import Button from 'react-bootstrap/Button';
 //que el nombre de la función sea el mismo nombre que el archivo.js
 function header() {
@@ -21,10 +21,10 @@ function header() {
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav>
             <Nav.Item>
-              <Button variant="light" className="rounded-pill text-dark me-4">Home</Button>
+              <Button variant="light" className="rounded-pill text-dark me-4">Cursos</Button>
             </Nav.Item>
             <Nav.Item>
-              <Button variant="light" className="rounded-pill text-dark">Link</Button>
+              <Button variant="light" className="rounded-pill text-dark">Ofertas</Button>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
