@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+
 import CursosOfertas from './view/CursosOfertas';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

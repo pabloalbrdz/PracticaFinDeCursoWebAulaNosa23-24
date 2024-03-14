@@ -3,6 +3,7 @@ import "./CursosOfertas.css";
 import Header from "../component/Header";
 
 function CursosOfertas(){
+
     let array = new Array();
     for (let i=1; i<=6; i++){
         array.push(<Article title={i}></Article>);
@@ -26,19 +27,19 @@ function CursosOfertas(){
     }
 
     return(
-        <div id="cursosofertaspantalla">
-            <header>
+        <div id="cursosofertaspantalla" className="row">
+            <header className="col-12">
                 <Header></Header>
             </header>
-            <main>
-                <aside>
-                    asdsaysdhguy
+            <main className="col-12 d-flex flex-row mt-1">
+                <aside className="col-2">
+                    Aside Barra Busqueda
                 </aside>
-                <section id="article-section">
-                    <div id="ofertascursoslista">
+                <section className="col-10">
+                    <div className="d-flex flex-column gap-2">
                         {array}
                     </div>
-                    <div id="pagination">
+                    <div id="paginacionCursosOfertas">
                         {pags}
                     </div>
                 </section>
