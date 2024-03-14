@@ -1,9 +1,9 @@
 import "./Articulo.css";
 
-function Articulo ({title}){
+function Articulo ({titulo}){
     return(
-        <div className="article-div">
-            <h2>{title}</h2>
+        <div className="articulo-div">
+            <h2>{titulo}</h2>
         </div>
     );
 }
