@@ -1,4 +1,4 @@
-import Header from './component/header.js';
+import Header from './component/Header.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 

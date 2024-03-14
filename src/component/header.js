@@ -1,16 +1,16 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import aulanosaLogo from '../assets/img/logo.png';
+import AulaNosaLogo from '../assets/img/logo.png';
 import Button from 'react-bootstrap/Button';
 //que el nombre de la función sea el mismo nombre que el archivo.js
-function header() {
+function Header() {
   return (
     <Navbar expand="lg">
       <Container>
         <Navbar.Brand href="#home">
           <img
-            src={aulanosaLogo} 
+            src={AulaNosaLogo} 
             width="100"
             height="50"
             className="d-inline-block align-top"
@@ -33,4 +33,4 @@ function header() {
   );
 }
 
-export default header;
+export default Header;
