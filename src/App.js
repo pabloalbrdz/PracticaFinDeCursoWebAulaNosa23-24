@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import LoginPage from './view/login'; 
+import LoginPage from './view/Login'; 
+
 
 
 

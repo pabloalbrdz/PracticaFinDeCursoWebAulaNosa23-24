@@ -16,12 +16,17 @@ body {
     width: 1200px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     position: relative; /* Asegurar que esté por encima del contenedor de la imagen difuminada */
+    --bs-gutter-x: 0rem;
   }
   /* Estilos para los campos de formulario */
   .form-control {
     border-radius: 20px !important;
     background-color: #f2f2f2 !important; /* Color de fondo gris */
     margin-top: 40px;
+   
+  }
+  .form-group{
+    margin-right: 30px;
   }
   /* Estilos para el botón */
   .btn-primary {
@@ -40,14 +45,10 @@ body {
     justify-content: center;
   }
  
-  .expansive {
-    border-radius: 20px;
-    overflow: hidden; /* Para asegurar que la imagen redondeada no se desborde */
-    width: 100%;
-    height: 800px;
-  }
+  /* */
   .expansive img {
     width: 900px; /* Para que la imagen ocupe todo el contenedor */
     height: 600px;
-    border-radius: 20px; /* Para que la imagen sea redondeada */
+    border-radius: 20px !important; /* Para que la imagen sea redondeada */
   }
+  
