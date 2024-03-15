@@ -21,7 +21,7 @@ function LoginPage() {
         {/* Columna de tamaño medio para la imagen de fondo */}
         <div className="col-md-6">
           {/* Contenedor para la imagen de fondo */}
-          <div className="expansive">
+          <div className="expansive d-none d-md-block">
             {/* Imagen de fondo */}
             <img src={backgroundImage} className="img-fluid rounded" alt="Foto difuminada" />
           </div>
