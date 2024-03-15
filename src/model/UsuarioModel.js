@@ -9,14 +9,14 @@ export class UsuarioModel{
             // Llamada asincrona a la API, al endpoint de Login
             const response = await fetch(
                 // Ruta
-                `${ApiSettings.serverurl}/login`,
+                `${ApiSettings.serverurl}/api/login`,
                 {
                     // Metodo POST
                     method: "POST",
                     // Cabeceras
                     headers: {
                         "Content-Type": "application/json",
-                        "Access-Control-Allow-Origin": "*"
+                        "Access-Control-Allow-Origin": `${ApiSettings.serverurl}`
                     },
                     // Cuerpo a enviar
                     body: {
