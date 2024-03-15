@@ -5,10 +5,7 @@ import backgroundImage from './img/backgroundImage.jpg';
 import logoImage from './img/AulaNosaIcon.png';
 
 function LoginPage() {
-  return (
-   
-        
-
+  return (     
         <div className="container">
           <div className="row">
             <div className="col-md-6">
