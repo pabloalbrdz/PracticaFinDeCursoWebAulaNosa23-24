@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+.washer-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.collapsed {
+  width: 50px; /* Ancho cuando está plegado */
+}
+
+.collapsed .fs-4 {
+  display: none; /* Oculta el título cuando está plegado */
+}

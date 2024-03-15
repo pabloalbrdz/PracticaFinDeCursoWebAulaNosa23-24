@@ -1,5 +1,5 @@
 import './App.css';
-import PantallaPrincipal from "./view/pantallaPrincipal.js";
+import PantallaPrincipal from "./view/PantallaPrincipal.js";
 function App() {
   return (
     <div className="App">
