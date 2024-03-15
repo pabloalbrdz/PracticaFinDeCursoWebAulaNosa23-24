@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Agregado */
+    background-image: url('img/backgroundImage.jpg');
+    backdrop-filter: blur(10px);
+  } 
+  /* Contenedor principal */
+  .container {
+    background-color: white;
+    border-radius: 20px;
+    height: 600px;
+    width: 1200px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    position: relative; /* Asegurar que esté por encima del contenedor de la imagen difuminada */
+    --bs-gutter-x: 0rem;
+  }
+  /* Estilos para los campos de formulario */
+  .form-control {
+    border-radius: 20px !important;
+    background-color: #f2f2f2 !important; /* Color de fondo gris */
+    margin-top: 40px;
+   
+  }
+  .form-group{
+    margin-right: 30px;
+  }
+  /* Estilos para el botón */
+  .btn-primary {
+    border-radius: 20px !important;
+    background-color: white !important;
+    color: black !important; /* Cambiar el color del texto a negro */
+    width: auto; /* Agregado */
+    margin-top: 40px;
+  }
+  .btn-primary:hover {
+    background-color: #e6e6e6 !important; /* Cambiar color de fondo al pasar el ratón */
+  }
+  .centered-logo {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  /* */
+  .expansive img {
+    width: 900px; /* Para que la imagen ocupe todo el contenedor */
+    height: 600px;
+    border-radius: 20px !important; /* Para que la imagen sea redondeada */
+  }
+  
