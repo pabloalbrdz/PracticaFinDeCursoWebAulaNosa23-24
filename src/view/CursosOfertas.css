@@ -1,0 +1,23 @@
+/* Estilo footer */
+footer{
+    background-color:#0750d8;
+    height: 60px;
+}
+
+/* Estilo para cada articulo de las oferas/cursos */
+#paginacionCursosOfertas > p{
+    display: inline !important;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* Estilo para el contenido principal (barra busqueda y articulos) */
+#cursosofertaspantallaMain{
+    margin-bottom: 5%;
+}
+
+/* Estilo Aside */
+#aside1{
+    background-color: grey;
+}
