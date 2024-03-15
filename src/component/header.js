@@ -6,9 +6,10 @@ import Button from 'react-bootstrap/Button';
 //que el nombre de la función sea el mismo nombre que el archivo.js
 function Header() {
   return (
+        // Contenedor del Navbar
     <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#home" className=''>
           <img
             src={AulaNosaLogo} 
             width="100"
@@ -20,11 +21,11 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav>
-            <Nav.Item>
-              <Button variant="light" className="rounded-pill text-dark me-4">Cursos</Button>
+          <Nav.Item>
+              <Button variant="light" className="rounded-pill text-dark me-4">Home</Button>
             </Nav.Item>
             <Nav.Item>
-              <Button variant="light" className="rounded-pill text-dark">Ofertas</Button>
+              <Button variant="light" className="rounded-pill text-dark me-4">Link</Button>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
