@@ -1,54 +1,60 @@
+/* Estilos para el cuerpo del documento */
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Agregado */
-    background-image: url('img/backgroundImage.jpg');
-    backdrop-filter: blur(10px);
-  } 
-  /* Contenedor principal */
-  .container {
-    background-color: white;
-    border-radius: 20px;
-    height: 600px;
-    width: 1200px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-    position: relative; /* Asegurar que esté por encima del contenedor de la imagen difuminada */
-    --bs-gutter-x: 0rem;
-  }
-  /* Estilos para los campos de formulario */
-  .form-control {
-    border-radius: 20px !important;
-    background-color: #f2f2f2 !important; /* Color de fondo gris */
-    margin-top: 40px;
-   
-  }
-  .form-group{
-    margin-right: 30px;
-  }
-  /* Estilos para el botón */
-  .btn-primary {
-    border-radius: 20px !important;
-    background-color: white !important;
-    color: black !important; /* Cambiar el color del texto a negro */
-    width: auto; /* Agregado */
-    margin-top: 40px;
-  }
-  .btn-primary:hover {
-    background-color: #e6e6e6 !important; /* Cambiar color de fondo al pasar el ratón */
-  }
-  .centered-logo {
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: center;
-  }
- 
-  /* */
-  .expansive img {
-    width: 900px; /* Para que la imagen ocupe todo el contenedor */
-    height: 600px;
-    border-radius: 20px !important; /* Para que la imagen sea redondeada */
-  }
-  
+  margin: 0; /* Elimina el margen predeterminado */
+  height: 100vh; /* Hace que el cuerpo ocupe el 100% del viewport height */
+  display: flex; /* Utiliza flexbox para centrar contenido verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  position: relative; /* Posición relativa para establecer el contexto de apilamiento */
+  background-image: url('img/backgroundImage.jpg'); /* Imagen de fondo */
+  backdrop-filter: blur(10px); /* Aplica un efecto de desenfoque al fondo */
+}
+
+/* Contenedor principal */
+.container {
+  background-color: white; /* Fondo blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  height: 600px; /* Altura fija */
+  width: 1200px; /* Ancho fijo */
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); /* Sombra */
+  position: relative; /* Posición relativa */
+  --bs-gutter-x: 0rem; /* Espacio entre columnas de Bootstrap */
+}
+
+/* Estilos para los campos de formulario */
+.form-control {
+  border-radius: 20px !important; /* Bordes redondeados */
+  background-color: #f2f2f2 !important; /* Color de fondo gris */
+  margin-top: 40px; /* Margen superior */
+}
+
+.form-group {
+  margin-right: 30px; /* Margen derecho */
+}
+
+/* Estilos para el botón */
+.btn-primary {
+  border-radius: 20px !important; /* Bordes redondeados */
+  background-color: white !important; /* Color de fondo blanco */
+  color: black !important; /* Color del texto negro */
+  width: auto; /* Ancho automático */
+  margin-top: 40px; /* Margen superior */
+}
+
+.btn-primary:hover {
+  background-color: #e6e6e6 !important; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para el contenedor del logo */
+.centered-logo {
+  margin-bottom: 60px; /* Margen inferior */
+  display: flex; /* Utiliza flexbox */
+  justify-content: center; /* Centra horizontalmente */
+}
+
+/* Estilos para la imagen expansiva */
+.expansive img {
+  width: 900px; /* Ancho de la imagen */
+  height: 600px; /* Altura de la imagen */
+  border-radius: 20px !important; /* Bordes redondeados */
+}
