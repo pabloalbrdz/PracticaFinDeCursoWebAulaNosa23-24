@@ -32,11 +32,7 @@ export class UsuarioModel{
             return json;
         }catch(error){
             // En caso de haber un error durante la ejecucion de la llamada, devolver error
-            return {
-                errores: [
-                    "No se ha podido llamar a la API"
-                ]
-            };
+            return {errorapi: "No se ha podido llamar a la API"};
         }
     }
 
