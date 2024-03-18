@@ -19,14 +19,17 @@ export class UsuarioModel{
                         "Access-Control-Allow-Origin": `${ApiSettings.serverurl}`
                     },
                     // Cuerpo a enviar
-                    body: {
-                        nombre: nombreInput,
-                        contrasena: contrasenaInput
-                    }
+                    body: JSON.stringify(
+                        {
+                            nombre: nombreInput,
+                            contrasena: contrasenaInput
+                        }
+                    )
                 }
             );
             // Al obtener la respuesta, enviar el JSON completo de esta misma respuesta
-            return response.json;
+            let json = await response.json();
+            return json;
         }catch(error){
             // En caso de haber un error durante la ejecucion de la llamada, devolver error
             return {
