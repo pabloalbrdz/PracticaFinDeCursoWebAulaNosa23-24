@@ -1,22 +1,18 @@
 import React, { Component } from 'react';
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from "@trendmicro/react-sidenav";
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
-
-class SideNavBar extends Component {
-  
+class BarraLateral extends Component {
   state = {
     expanded: true,
     showProfileInfo: false // Nuevo estado para controlar la visibilidad de la información del perfil
   };
-
   toggleExpanded = () => {
     this.setState(prevState => ({ expanded: !prevState.expanded }));
-    // Agregar un retraso de 100 ms antes de mostrar la información del perfil
+    // Agregar un retraso de 300 ms antes de mostrar la información del perfil
     setTimeout(() => {
       this.setState({ showProfileInfo: this.state.expanded });
     }, 100);
   };
-
   renderProfileInfo = () => {
     // Función para renderizar la información del perfil
     return (
@@ -38,14 +34,12 @@ class SideNavBar extends Component {
       </div>
     );
   };
-
   render() {
     const { expanded, showProfileInfo } = this.state;
-    // Renderiza la lista de elementos del SideNav solo si está expandido y showProfileInfo es verdadero
-    const profileInfo = expanded && showProfileInfo ? this.renderProfileInfo() : null;
-
+    // Renderiza la lista de elementos del SideNav solo si está expandido
+    const profileInfo = showProfileInfo ? this.renderProfileInfo() : null;
     return (
-      <SideNav expanded={expanded} onToggle={this.toggleExpanded} className="custom-background">
+      <SideNav expanded={expanded} onToggle={this.toggleExpanded} className="custom-background mt-navbar">
         <Toggle />
         <Nav>
           <NavItem eventKey="perfil">
@@ -60,5 +54,4 @@ class SideNavBar extends Component {
     );
   }
 }
-
-export default SideNavBar;
+export default BarraLateral;

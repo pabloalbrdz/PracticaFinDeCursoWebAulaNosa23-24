@@ -1,4 +1,4 @@
-import Sidebar from '../component/SideBar.js';
+import BarraLateral from '../component/BarraLateral.js';
 import PanelOfertas from '../component/PanelOfertas.js';
 import PanelCursos from '../component/PanelCursos.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,7 +13,7 @@ function PantallaPrincipal() {
     <div className="d-flex vh-100">
       <div className="sidebar" style={{ width: '30%' }}>
         {/* Aquí va el contenido del sidebar */}
-        <Sidebar />
+        <BarraLateral />
       </div>
       
       {/* Contenedor de ofertas y cursos */}
