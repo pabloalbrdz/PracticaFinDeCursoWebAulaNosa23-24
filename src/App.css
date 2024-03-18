@@ -42,4 +42,9 @@ nav {
   background-color: #0750D8;
 }
 
-
+/* Forzamos a usar el color #0750D8  */
+.custom-background {
+  background-color: #0750D8 !important;
+  margin-top: 4%;
+  height: 101%;
+}

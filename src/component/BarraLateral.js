@@ -16,7 +16,7 @@ class BarraLateral extends Component {
   renderProfileInfo = () => {
     // Función para renderizar la información del perfil
     return (
-      <div className="p-3">
+      <div>
         <div className="text-center">
           <img src="https://via.placeholder.com/150" alt="User" className="rounded-circle mb-3" />
           <h4>Nombre Apellido</h4>
@@ -26,10 +26,10 @@ class BarraLateral extends Component {
         <p>Nombre de usuario: usuario123</p>
         <p>Otro dato: dato1</p>
         <p>Otro dato: dato2</p>
-        <p>Otro dato: dato3</p>
         <div className="mt-4">
-          <button className="btn btn-primary btn-block">Editar</button>
-          <button className="btn btn-danger btn-block mt-2">Cerrar sesión</button>
+          <button className="btn btn-primary btn-block">Editar</button> 
+          <hr/>       
+          <button className="btn btn-danger btn-block mb-1">Cerrar sesión</button>
         </div>
       </div>
     );
