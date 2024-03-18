@@ -1,0 +1,19 @@
+/* Diseno en caso de querer ver el estado del login */
+.login-alerta-visible{
+    visibility: visible;
+}
+
+/* Diseno en caso de querer ocultar el estado del login */
+.login-alerta-oculto{
+    visibility: hidden;
+}
+
+/* Diseno en caso de que el login sea correcto */
+.login-alerta-correcto{
+    color: green;
+}
+
+/* Diseno en caso de que el login sea incorrecto */
+.login-alerta-erroneo{
+    color: red;
+}

@@ -1,5 +1,5 @@
 // Importa el paquete React
-import React from 'react';
+import React, { useState } from 'react';
 
 // Importa el CSS de Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,8 +11,21 @@ import './Login.css';
 import backgroundImage from './img/backgroundImage.jpg'; // Imagen de fondo
 import logoImage from './img/AulaNosaIcon.png'; // Imagen del logo
 
+// Importar Componente Estado Login
+import LoginAlerta from '../component/LoginAlerta';
+import { UsuarioController } from '../controller/UsuarioController';
+
 // Define el componente LoginPage
 function LoginPage() {
+  // Componente dinamico que representa el estado del login
+  const [alertaLogin, setAlertaLogin] = useState(<LoginAlerta visible={"login-alerta-oculto"}></LoginAlerta>)
+  // Funcion de click del boton
+  async function clickBotonEnviarDatos(e){
+    // Cancelar estado normal del boton de envio para redirigirlo a nuestro controlador
+    e.preventDefault();
+    // Llamar al controlador
+    await UsuarioController.loginUsuarioModel(document.getElementById("email").value, document.getElementById("contrasena").value, setAlertaLogin);
+  }
   return (
     // Contenedor principal con la clase "container" de Bootstrap
     <div className="container">
@@ -34,17 +47,19 @@ function LoginPage() {
             <img src={logoImage} className="img-fluid rounded" alt="Logo" />
           </div>
           {/* Formulario de inicio de sesión */}
-          <form>
+          <form className='d-flex flex-column'>
+            {/* Mostrar estado alerta login */}
+            {alertaLogin}
             {/* Grupo de campos del formulario */}
             <div className="form-group">
               {/* Campo para ingresar el nombre de usuario */}
-              <input type="text" className="form-control" id="usuario" placeholder="Ingrese su usuario" required />
+              <input type="email" className="form-control" id="email" placeholder="Ingrese su email" required />
               {/* Campo para ingresar la contraseña */}
               <input type="password" className="form-control" id="contrasena" placeholder="Ingrese su contraseña" required />
             </div>
             {/* Botón de inicio de sesión */}
             <div className="text-center">
-              <button type="submit" className="btn btn-primary">Iniciar Sesión</button>
+              <button type="submit" className="btn btn-primary" onClick={clickBotonEnviarDatos}>Iniciar Sesión</button>
             </div>
           </form>
         </div>
