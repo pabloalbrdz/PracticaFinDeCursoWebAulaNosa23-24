@@ -4,6 +4,7 @@ function App() {
   return (
     <div className="App">
       <header>
+        <Header/>
        <PantallaPrincipal/>
       </header>
     </div>
