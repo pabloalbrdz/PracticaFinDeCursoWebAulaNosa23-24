@@ -1,0 +1,17 @@
+#footer-campus {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    border-top: 1px solid #ccc; /* Línea delimitadora */
+    padding: 10px 0; /* Añadir espacio entre la línea y el contenido */
+  }
+  
+  .containercampus {
+    max-width: 960px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido */
+  }
+  
+  .evol-footer-2 {
+    color: #333; /* Color del texto */
+  }

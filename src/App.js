@@ -8,7 +8,12 @@ function App() {
     <div className="App">
       <Header/>
       <PantallaPrincipal/>
+      <Footer/>
     </div>
+    
+    
+
+    
   );
 }
 export default App;
