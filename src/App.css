@@ -37,21 +37,9 @@
   }
 }
 
-.washer-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+/* Se especifíca el color del header  */
+nav {
+  background-color: #0750D8;
 }
 
-.collapsed {
-  width: 50px; /* Ancho cuando está plegado */
-}
 
-.collapsed .fs-4 {
-  display: none; /* Oculta el título cuando está plegado */
-}
-
-.custom-background {
-  background-color: #0750D8 !important; /* Usa !important para asegurarte de que sobrescribe otros estilos */
-  /* min-width: 300px; */
-}
