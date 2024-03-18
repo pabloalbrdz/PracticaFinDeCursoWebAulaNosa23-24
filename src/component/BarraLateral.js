@@ -26,10 +26,10 @@ class BarraLateral extends Component {
         <p>Nombre de usuario: usuario123</p>
         <p>Otro dato: dato1</p>
         <p>Otro dato: dato2</p>
-        <div className="mt-4">
+        <div className="">
           <button className="btn btn-primary btn-block">Editar</button> 
           <hr/>       
-          <button className="btn btn-danger btn-block mb-1">Cerrar sesión</button>
+          <button className="btn btn-danger btn-block mb-2">Cerrar sesión</button>
         </div>
       </div>
     );

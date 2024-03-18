@@ -10,10 +10,7 @@ function App() {
       <PantallaPrincipal/>
       <Footer/>
     </div>
-    
-    
 
-    
   );
 }
 export default App;
