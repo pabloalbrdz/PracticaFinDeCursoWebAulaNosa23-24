@@ -24,7 +24,7 @@ function LoginPage() {
     // Cancelar estado normal del boton de envio para redirigirlo a nuestro controlador
     e.preventDefault();
     // Llamar al controlador
-    await UsuarioController.loginUsuarioModel(document.getElementById("usuario").value, document.getElementById("contrasena").value, setAlertaLogin);
+    await UsuarioController.loginUsuarioModel(document.getElementById("email").value, document.getElementById("contrasena").value, setAlertaLogin);
   }
   return (
     // Contenedor principal con la clase "container" de Bootstrap
@@ -53,7 +53,7 @@ function LoginPage() {
             {/* Grupo de campos del formulario */}
             <div className="form-group">
               {/* Campo para ingresar el nombre de usuario */}
-              <input type="text" className="form-control" id="usuario" placeholder="Ingrese su usuario" required />
+              <input type="email" className="form-control" id="email" placeholder="Ingrese su email" required />
               {/* Campo para ingresar la contraseña */}
               <input type="password" className="form-control" id="contrasena" placeholder="Ingrese su contraseña" required />
             </div>
