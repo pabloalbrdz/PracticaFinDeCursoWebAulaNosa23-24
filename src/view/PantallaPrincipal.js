@@ -13,7 +13,7 @@ function PantallaPrincipal() {
     <div className="d-flex vh-100">
         {/* 16% desplegado  */}
             {/* 5% sin desplegar  */}
-      <div className="sidebar" style={{ width: '16%' }}>
+      <div >
         {/* Aquí va el contenido del sidebar */}
         <BarraLateral />
       </div>
