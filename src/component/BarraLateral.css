@@ -1,0 +1,12 @@
+/* Aplicar responsive entre el footer y la barra lateral  */
+@media screen and (max-height: 520px) {
+    #footer-campus{
+        margin-top: 30%;
+    }
+}
+
+@media screen and (max-height: 360px) {
+    #footer-campus{
+        margin-top: 50vh;
+    }
+}

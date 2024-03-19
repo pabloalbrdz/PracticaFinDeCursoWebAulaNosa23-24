@@ -1,9 +1,3 @@
-/* Estilo footer */
-footer{
-    background-color:#0750d8;
-    height: 60px;
-}
-
 /* Estilo para cada articulo de las oferas/cursos */
 #paginacionCursosOfertas > p{
     display: inline !important;

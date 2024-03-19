@@ -1,17 +1,17 @@
 /* Estilos para el cuerpo del documento */
-body {
+.loginbody {
   margin: 0; /* Elimina el margen predeterminado */
   height: 100vh; /* Hace que el cuerpo ocupe el 100% del viewport height */
   display: flex; /* Utiliza flexbox para centrar contenido verticalmente */
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   position: relative; /* Posición relativa para establecer el contexto de apilamiento */
-  background-image: url('img/backgroundImage.jpg'); /* Imagen de fondo */
+  background-image: url('../assets/img/BackgroundImage.jpg'); /* Imagen de fondo */
   backdrop-filter: blur(10px); /* Aplica un efecto de desenfoque al fondo */
 }
 
 /* Contenedor principal */
-.container {
+.containerlogin {
   background-color: white; /* Fondo blanco */
   border-radius: 20px; /* Bordes redondeados */
   height: 600px; /* Altura fija */
@@ -33,7 +33,7 @@ body {
 }
 
 /* Estilos para el botón */
-.btn-primary {
+.btn-primary-login {
   border-radius: 20px !important; /* Bordes redondeados */
   background-color: white !important; /* Color de fondo blanco */
   color: black !important; /* Color del texto negro */
@@ -41,7 +41,7 @@ body {
   margin-top: 40px; /* Margen superior */
 }
 
-.btn-primary:hover {
+.btn-primary-login:hover {
   background-color: #e6e6e6 !important; /* Cambia el color de fondo al pasar el ratón */
 }
 
