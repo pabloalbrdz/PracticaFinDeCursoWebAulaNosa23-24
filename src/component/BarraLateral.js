@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "./BarraLateral.css"
 export const BarraLateral = () => {
   const renderProfileInfo = () => {
+    // Datos del perfil de usuario a la hora de ser desplegado 
     return (
       <div className='cuadro'>
         <div className="text-center">
@@ -21,7 +22,7 @@ export const BarraLateral = () => {
       </div>
     );
   };
-
+  // Botón que permite desplegar 
   return (
     <div>
       <p>

@@ -1,3 +1,4 @@
+/* Aplicar responsive entre el footer y la barra lateral  */
 @media screen and (max-height: 520px) {
     #footer-campus{
         margin-top: 30%;
