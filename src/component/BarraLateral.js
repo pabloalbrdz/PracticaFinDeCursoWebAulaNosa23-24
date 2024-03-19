@@ -5,7 +5,7 @@ import "./BarraLateral.css"
 export const BarraLateral = () => {
   const renderProfileInfo = () => {
     return (
-      <div>
+      <div className='cuadro'>
         <div className="text-center">
           <img src="https://via.placeholder.com/150" alt="User" className="rounded-circle mb-3" />
           <h4>Nombre Apellido</h4>
