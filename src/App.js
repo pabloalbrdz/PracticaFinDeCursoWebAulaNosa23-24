@@ -16,15 +16,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Define el componente principal de la aplicación
 function App() {
-  return (
-    // Contenedor principal de la aplicación con la clase "App"
-    <div className="App">
-      <LoginPage />
-      {/* <PantallaPrincipal />
-      <CursosOfertas></CursosOfertas> */}
-    </div>
-
-  );
+  // Si el sesion iniciada es correcta abre PantallaPrincipal y si no abre LoginPage
+  if(sessionStorage.getItem("usuario") != undefined){
+    return (
+    <PantallaPrincipal/>
+    )
+  }else{
+    return (
+      <LoginPage/>
+      )
+  }
 }
 
 export default App;

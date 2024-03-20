@@ -2,15 +2,16 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
 import "./BarraLateral.css"
+import { AESEncriptado } from '../settings/encrypmethods';
 export const BarraLateral = () => {
   const renderProfileInfo = () => {
     // Datos del perfil de usuario a la hora de ser desplegado 
-    let nombre = JSON.parse(sessionStorage.getItem("usuario")).nombre;
-    let apellidos = JSON.parse(sessionStorage.getItem("usuario")).apellidos;
-    let usuario = JSON.parse(sessionStorage.getItem("usuario")).usuario;
-    let email = JSON.parse(sessionStorage.getItem("usuario")).email;
-    let telefono = JSON.parse(sessionStorage.getItem("usuario")).telefono;
-    let estado = JSON.parse(sessionStorage.getItem("usuario")).estado;
+    let nombre = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).nombre);
+    let apellidos = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).apellidos);
+    let usuario = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).usuario);
+    let email = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).email);
+    let telefono = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).telefono);
+    let estado = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).estado);
     return (
       <div className='cuadro'>
         <div className="text-center">
