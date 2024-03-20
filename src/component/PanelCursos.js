@@ -1,9 +1,9 @@
-import {React, useEffect} from 'react';
+import {React, useEffect, useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import { FormacionesController } from '../controller/FormacionesController';
 
 function PanelCursos() {
-  let arrayVista = [];
+  let [arrayVista, setArrayVista] = useState([]);
   async function crearCartas(){
     let arrayCursos = await FormacionesController.verUltimasFormaciones();
     let arrayCartas = new Array();
@@ -17,11 +17,11 @@ function PanelCursos() {
         </Card>
       )
     }
-    return arrayCartas;
+    setArrayVista(arrayCartas);
   }
   useEffect(
-    async function(){
-      arrayVista = await crearCartas();
+    function(){
+      crearCartas();
     }, 
     []
   );
