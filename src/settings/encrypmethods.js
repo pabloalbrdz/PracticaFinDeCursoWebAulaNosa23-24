@@ -20,6 +20,23 @@ export class AESEncriptado{
         return encrypt.toString();
     }
 
+    static desencriptador(textoEncriptado) {
+        // Texto a cifrar pasandolo a Base64
+        var tetxocypher = CryptoJS.enc.Base64.parse(textoEncriptado);
+        // Parametros Cypher
+        var cipherParams = CryptoJS.lib.CipherParams.create({ ciphertext: tetxocypher });
+        // Desencriptado
+        var decrypted = CryptoJS.AES.decrypt(
+            cipherParams,
+            this.clave,
+            { iv: this.iv, mode: CryptoJS.mode.CTR }
+        );
+        // Texto desencriptado
+        var textoDesencriptado = decrypted.toString(CryptoJS.enc.Utf8);
+        return textoDesencriptado;
+    }
+    
+
 }
 
 // Clase para el hasheo con SHA256

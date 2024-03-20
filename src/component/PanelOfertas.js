@@ -27,7 +27,7 @@ function PanelOfertas() {
   );
   return (
     <Card className="p-3 mb-4 mt-4 border-0 rounded">
-      <Card.Body className="bg-secondary p-3 rounded">
+      <Card.Body className="articleinfo p-3 rounded">
         <h2 className="text-light mb-4">Ofertas</h2>
         <div className="d-flex flex-wrap justify-content-around">
         {arrayVista}
