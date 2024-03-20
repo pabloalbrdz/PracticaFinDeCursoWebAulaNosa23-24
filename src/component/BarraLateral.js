@@ -11,7 +11,7 @@ export const BarraLateral = () => {
     let usuario = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).usuario);
     let email = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).email);
     let telefono = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).telefono);
-    let estado = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).estado);
+    let estado = JSON.parse(sessionStorage.getItem("usuario")).estado;
     return (
       <div className='cuadro'>
         <div className="text-center">
