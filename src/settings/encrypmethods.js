@@ -20,6 +20,16 @@ export class AESEncriptado{
         return encrypt.toString();
     }
 
+    static desencriptador(texto){
+        // Configuracion: Texto a desencriptar, clave, vector de inicializacion y modo
+        var decrypt = CryptoJS.AES.decrypt(texto, this.clave, {
+            iv: this.iv,
+            mode: CryptoJS.mode.CTR
+        });
+        // Devolver texto encriptado
+        return decrypt.toString();
+    }
+
 }
 
 // Clase para el hasheo con SHA256

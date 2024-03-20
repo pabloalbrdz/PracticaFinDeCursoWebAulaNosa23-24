@@ -20,8 +20,8 @@ function App() {
     // Contenedor principal de la aplicación con la clase "App"
     <div className="App">
       <LoginPage />
-      {/* <PantallaPrincipal /> */}
-      {/* <CursosOfertas></CursosOfertas> */}
+      {/* <PantallaPrincipal />
+      <CursosOfertas></CursosOfertas> */}
     </div>
 
   );

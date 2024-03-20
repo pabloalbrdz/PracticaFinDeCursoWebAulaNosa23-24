@@ -5,17 +5,23 @@ import "./BarraLateral.css"
 export const BarraLateral = () => {
   const renderProfileInfo = () => {
     // Datos del perfil de usuario a la hora de ser desplegado 
+    let nombre = JSON.parse(sessionStorage.getItem("usuario")).nombre;
+    let apellidos = JSON.parse(sessionStorage.getItem("usuario")).apellidos;
+    let usuario = JSON.parse(sessionStorage.getItem("usuario")).usuario;
+    let email = JSON.parse(sessionStorage.getItem("usuario")).email;
+    let telefono = JSON.parse(sessionStorage.getItem("usuario")).telefono;
+    let estado = JSON.parse(sessionStorage.getItem("usuario")).estado;
     return (
       <div className='cuadro'>
         <div className="text-center">
           <img src="https://via.placeholder.com/150" alt="User" className="rounded-circle mb-3" />
-          <h4>Nombre Apellido</h4>
+          <h4>{`${nombre} ${apellidos}`}</h4>
         </div>
         <div className='mt-4 d-flex flex-column gap-4'>
-        <p>Email: correo@ejemplo.com</p>
-        <p>Nombre de usuario: usuario123</p>
-        <p>Otro dato: dato1</p>
-        <p>Otro dato: dato2</p>
+        <p><br>Usuario: </br> {`${usuario}`}</p>
+        <p><br>Email: </br> {`${email}`}</p>
+        <p><br>Telefono: </br>{`${telefono}`}</p>
+        <p><br>Estado: </br>{`${estado}`}</p>
           <button className="btn btn-primary btn-block">Editar</button> 
           <button className="btn btn-danger btn-block mb-2">Cerrar sesión</button>
         </div>
