@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { FormacionesController } from '../controller/FormacionesController';
 
 function PanelCursos() {
-  let [arrayVista, setArrayVista] = useState([]);
+  let [arrayVista2, setArrayVista2] = useState([]);
   async function crearCartas(){
     let arrayCursos = await FormacionesController.verUltimasFormaciones();
     let arrayCartas = new Array();
@@ -17,7 +17,7 @@ function PanelCursos() {
         </Card>
       )
     }
-    setArrayVista(arrayCartas);
+    setArrayVista2(arrayCartas);
   }
   useEffect(
     function(){
@@ -30,7 +30,7 @@ function PanelCursos() {
       <Card.Body className="articleinfo p-3 rounded">
         <h2 className="text-light mb-4">Cursos</h2>
         <div className="d-flex flex-wrap justify-content-around">
-          {arrayVista}
+          {arrayVista2}
         </div>
       </Card.Body>
     </Card>
