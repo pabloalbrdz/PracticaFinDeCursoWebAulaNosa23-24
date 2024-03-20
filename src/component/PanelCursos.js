@@ -9,7 +9,7 @@ function PanelCursos() {
     let arrayCartas = new Array();
     for (let curso of arrayCursos){
       arrayCartas.push(
-        <Card style={{ width: '400px', height: '8rem' }}>
+        <Card className='mb-4' style={{ width: '400px', height: '8rem' }}>
           <Card.Body>
             <Card.Title>{curso.titulo}</Card.Title>
             <Card.Text>{curso.descripcion}</Card.Text>

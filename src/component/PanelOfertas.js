@@ -9,7 +9,7 @@ function PanelOfertas() {
     let arrayCartas = new Array();
     for (let oferta of arrayOfertas){
       arrayCartas.push(
-        <Card style={{ width: '400px', height: '8rem' }}>
+        <Card className='mb-4' style={{ width: '400px', height: '8rem' }}>
           <Card.Body>
             <Card.Title>{oferta.titulo}</Card.Title>
             <Card.Text>{oferta.descripcion}</Card.Text>
