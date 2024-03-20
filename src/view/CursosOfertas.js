@@ -1,48 +1,55 @@
-import React, { useEffect, useState } from 'react';
 import Articulo from "../component/Articulo";
+import "./CursosOfertas.css";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
-import { UsuarioController } from "../controller/UsuarioController";
 
-function CursosOfertas() {
-    const [ultimasOfertas, setUltimasOfertas] = useState([]);
+function CursosOfertas(){
 
-    useEffect(() => {
-        // Función asincrónica para obtener y mostrar las últimas ofertas
-        const obtenerYMostrarUltimasOfertas = async () => {
-            try {
-                // Obtener las últimas ofertas desde el controlador de usuario
-                const ofertas = await UsuarioController.obtenerUltimasOfertas();
-                // Establecer las últimas ofertas en el estado
-                setUltimasOfertas(ofertas);
-            } catch (error) {
-                console.error("Error al obtener y mostrar las últimas ofertas:", error);
-            }
-        };
+    // Array de ejemplo para ver como quedarian las ofertas
+    let array = new Array();
+    for (let i=1; i<=6; i++){
+        array.push(<Articulo title={i}></Articulo>);
+    }
 
-        // Llama a la función para obtener y mostrar las últimas ofertas cuando el componente se monta
-        obtenerYMostrarUltimasOfertas();
-    }, []);
+    // Ejeplo de recuperar un array con todas las ofertas y cursos
+    let ofertascursos = new Array();
+    for (let i=1; i<=150; i++){
+        ofertascursos.push(<Articulo title={i}></Articulo>);
+    }
+    
+    // Paginacion (no tiene funcionalidad, eso es otra tarea)
+    let pagina = 0;
+    let inicio = 0;
+    let final = 0;
+    let pags = new Array();
+    while(final < ofertascursos.length){
+        inicio = (pagina * 6) + 1;
+        final = Math.min((pagina + 1) * 6,ofertascursos.length);
+        pags.push(<p>{pagina + 1}</p>)
+        pagina++;
+    }
 
-    // Mapea las últimas ofertas para mostrarlas en la pantalla principal
-    const ultimasOfertasComponentes = ultimasOfertas.map((oferta, index) => (
-        <Articulo key={index} title={oferta.title} />
-    ));
-
-    return (
+    return(
         <div id="cursosofertaspantalla" className="row vw-100">
-            <Header />
+            {/* Header */}
+            <Header></Header>
             <main id="cursosofertaspantallaMain" className="col-12 d-flex flex-row mt-1">
+                {/* Aqui va el aside que se hara en otra tarea */}
                 <aside id="aside1" className="col-2 mt-3 h-100">
                     Aside Barra Busqueda
                 </aside>
                 <section className="col-10 mt-5">
+                    {/* Aqui van los cursos y ofertas */}
                     <div className="d-flex flex-column gap-2">
-                        {ultimasOfertasComponentes}
+                        {array}
                     </div>
                 </section>
             </main>
-            <Footer />
+            {/* Paginacion */}
+            <div id="paginacionCursosOfertas" className="mb-2">
+                {pags}
+            </div>
+            <Footer></Footer>
         </div>
     );
 }
