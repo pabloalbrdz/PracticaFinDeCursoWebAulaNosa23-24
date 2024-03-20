@@ -16,7 +16,55 @@ export const BarraLateral = () => {
         <p>Nombre de usuario: usuario123</p>
         <p>Otro dato: dato1</p>
         <p>Otro dato: dato2</p>
-          <button className="btn btn-primary btn-block">Editar</button> 
+          {/* Modal para editar el perfil del usuario  */}
+        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Editar
+        </button>
+
+        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="exampleModalLabel">EDITAR PERFIL</h1>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              {/* //Body del modal  */}
+              <div className="modal-body">
+                <div className="md-form mb-5">
+                  <label htmlFor="usuario" className="form-label">Usuario</label>
+                  <input type="text" className="form-control mt-2" id="usuario" placeholder="Ingrese su nombre de usuario" />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="correo" className="form-label">Correo Electrónico</label>
+                  <input type="email" className="form-control mt-2" id="correo" placeholder="Ingrese su correo electrónico" />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="estadoLaboral" className="form-label">Estado Laboral</label>
+                  <select className="form-select" id="estadoLaboral">
+                    <option value="ejemplo1">Ejemplo 1</option>
+                    <option value="ejemplo2">Ejemplo 2</option>
+                    <option value="ejemplo3">Ejemplo 3</option>
+                  </select>
+                </div>
+                <div className="mb-3">
+                <label htmlFor="aptitudes" className="form-label">Aptitudes</label>
+                <select className="form-select" multiple aria-label='Multiple select example' id="aptitudes">
+                  <option value="ejemplo1">Ejemplo 1</option>
+                  <option value="ejemplo2">Ejemplo 2</option>
+                  <option value="ejemplo3">Ejemplo 3</option>
+                </select>
+                </div>
+              </div>
+
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" className="btn btn-primary">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Botón de cerrar sesión  */}
           <button className="btn btn-danger btn-block mb-2">Cerrar sesión</button>
         </div>
       </div>
