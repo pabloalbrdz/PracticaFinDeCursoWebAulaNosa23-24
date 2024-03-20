@@ -2,20 +2,27 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
 import "./BarraLateral.css"
+import { AESEncriptado } from '../settings/encrypmethods';
 export const BarraLateral = () => {
   const renderProfileInfo = () => {
     // Datos del perfil de usuario a la hora de ser desplegado 
+    let nombre = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).nombre);
+    let apellidos = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).apellidos);
+    let usuario = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).usuario);
+    let email = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).email);
+    let telefono = AESEncriptado.desencriptador(JSON.parse(sessionStorage.getItem("usuario")).telefono);
+    let estado = JSON.parse(sessionStorage.getItem("usuario")).estado;
     return (
       <div className='cuadro'>
         <div className="text-center">
           <img src="https://via.placeholder.com/150" alt="User" className="rounded-circle mb-3" />
-          <h4>Nombre Apellido</h4>
+          <h4>{`${nombre} ${apellidos}`}</h4>
         </div>
         <div className='mt-4 d-flex flex-column gap-4'>
-        <p>Email: correo@ejemplo.com</p>
-        <p>Nombre de usuario: usuario123</p>
-        <p>Otro dato: dato1</p>
-        <p>Otro dato: dato2</p>
+        <p>Usuario:  {`${usuario}`}</p>
+        <p>Email:  {`${email}`}</p>
+        <p>Telefono: {`${telefono}`}</p>
+        <p>Estado: {`${estado}`}</p>
           <button className="btn btn-primary btn-block">Editar</button> 
           <button className="btn btn-danger btn-block mb-2">Cerrar sesión</button>
         </div>
