@@ -5,6 +5,7 @@ import { AESEncriptado, SHA256Hasheo } from "../settings/encrypmethods";
 // Clase donde almacenareos los metodos del controlador relacionados al Usuario
 export class UsuarioController{
 
+    // Metodo para realizar el login de usuario
     static async loginUsuarioModel(emailInput, contrasenaInput, setEstadoLogin){
         // Acudir a la llamada a la API desde el modelo, encriptando el email y hasheando la contrasena
         let response = await UsuarioModel.loginUsuarioModel(AESEncriptado.encriptador(emailInput), SHA256Hasheo.hasheador(contrasenaInput));
@@ -23,6 +24,15 @@ export class UsuarioController{
                 setEstadoLogin(<LoginAlerta visible={"login-alerta-visible"} estado={"login-alerta-erroneo"} mensaje={"Error: Correo o contraseña erroneos"}></LoginAlerta>);
             }
         }
+    }
+
+
+    // Metodo para cerrar la sesion de usuario
+    static cerrarSesionUsuario(){
+        // Eliminar sesion, eso implica que al no tener sesion, la pagina en el estado inicial, apareceria el menu de login
+        sessionStorage.removeItem("usuario");
+        // Recargar la página 
+        window.location.reload();
     }
 
 
