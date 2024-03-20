@@ -6,7 +6,7 @@ export class OfertasModel{
     static async obtenerUltimasOfertas() {
         try {
             // Realiza una llamada a la API para obtener las últimas ofertas
-            const response = await fetch(`${ApiSettings.serverurl}/api/ofertas`);
+            const response = await fetch(`${ApiSettings.serverurl}/api/ofertas`, {method: "GET"});
             // Parsea la respuesta como JSON
             const ofertas = await response.json();
             return ofertas;
