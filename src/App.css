@@ -4,7 +4,15 @@
 
 /* Se especifíca el color del header  */
 nav {
-  background-color: #0750D8;
+  background-color: rgb(25, 5, 255);
+}
+
+.articleinfo{
+  background-color: rgb(25, 5, 255);
+}
+
+.colorbuttontoggle{
+  background-color: rgb(25, 5, 255);
 }
 
 

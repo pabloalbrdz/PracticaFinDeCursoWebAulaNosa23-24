@@ -9,7 +9,7 @@ function PanelCursos() {
     let arrayCartas = new Array();
     for (let curso of arrayCursos){
       arrayCartas.push(
-        <Card>
+        <Card style={{ width: '400px', height: '8rem' }}>
           <Card.Body>
             <Card.Title>{curso.titulo}</Card.Title>
             <Card.Text>{curso.descripcion}</Card.Text>
@@ -27,7 +27,7 @@ function PanelCursos() {
   );
   return (
     <Card className="p-3 border-0 rounded">
-      <Card.Body className="bg-secondary p-3 rounded">
+      <Card.Body className="articleinfo p-3 rounded">
         <h2 className="text-light mb-4">Cursos</h2>
         <div className="d-flex flex-wrap justify-content-around">
           {arrayVista}
