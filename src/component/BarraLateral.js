@@ -19,10 +19,10 @@ export const BarraLateral = () => {
           <h4>{`${nombre} ${apellidos}`}</h4>
         </div>
         <div className='mt-4 d-flex flex-column gap-4'>
-        <p><br>Usuario: </br> {`${usuario}`}</p>
-        <p><br>Email: </br> {`${email}`}</p>
-        <p><br>Telefono: </br>{`${telefono}`}</p>
-        <p><br>Estado: </br>{`${estado}`}</p>
+        <p>Usuario:  {`${usuario}`}</p>
+        <p>Email:  {`${email}`}</p>
+        <p>Telefono: {`${telefono}`}</p>
+        <p>Estado: {`${estado}`}</p>
           <button className="btn btn-primary btn-block">Editar</button> 
           <button className="btn btn-danger btn-block mb-2">Cerrar sesión</button>
         </div>
