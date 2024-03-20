@@ -12,6 +12,8 @@ export class UsuarioController{
             // En caso de no haber errores (array de errores vacio), crear sesion y modificar alerta con estilo de login correcto
             sessionStorage.setItem("usuario", JSON.stringify(response.usuario));
             setEstadoLogin(<LoginAlerta visible={"login-alerta-visible"} estado={"login-alerta-correcto"} mensaje={"Inicio de sesion con exito"}></LoginAlerta>);
+            // Recarga la página 
+            window.location.reload();
         }else{
             if (response.errorapi != undefined){
                 // En caso de que no se pueda conectar a la API, modificar alerta con estilo de login incorrecto y mostrar error de no conexion
