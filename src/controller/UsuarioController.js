@@ -27,10 +27,10 @@ export class UsuarioController{
 
     static async obtenerUltimasOfertas() {
         try {
-            // Llama al método del modelo para obtener las últimas ofertas
-            const ofertas = await UsuarioModel.obtenerUltimasOfertas();
+            // Llama al método del modelo para obtener todas las ofertas
+            const todasLasOfertas = await UsuarioModel.obtenerTodasLasOfertas();
             // Devuelve las últimas 4 ofertas (o menos si hay menos disponibles)
-            return ofertas.slice(0, 4);
+            return todasLasOfertas.slice(-4);
         } catch (error) {
             // Maneja errores al obtener las ofertas
             console.error("Error al obtener las últimas ofertas:", error);
