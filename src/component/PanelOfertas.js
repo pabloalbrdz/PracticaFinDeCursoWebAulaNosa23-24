@@ -3,6 +3,13 @@ import Card from 'react-bootstrap/Card';
 import { OfertasController } from '../controller/OfertasController';
 
 function PanelOfertas() {
+  const truncarTexto = (texto, longitud) => {
+    // Verifica si el texto es más largo que la longitud especificada
+    if (texto.length > longitud) {
+      return texto.slice(0, longitud) + '...'; // Trunca el texto si es más largo
+    }
+    return texto; // Devuelve el texto original si es igual o más corto
+  };
   let [arrayVista, setArrayVista] = useState([]);
   async function crearCartas(){
     let arrayOfertas = await OfertasController.obtenerUltimasOfertas();
@@ -11,8 +18,8 @@ function PanelOfertas() {
       arrayCartas.push(
         <Card className='mb-4' style={{ width: '400px', height: '8rem' }}>
           <Card.Body>
-            <Card.Title>{oferta.titulo}</Card.Title>
-            <Card.Text>{oferta.descripcion}</Card.Text>
+            <Card.Title>{truncarTexto(oferta.titulo, 100)}</Card.Title>
+            <Card.Text>{truncarTexto(oferta.descripcion, 100)}</Card.Text>
           </Card.Body>
         </Card>
       )

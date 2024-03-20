@@ -3,6 +3,13 @@ import Card from 'react-bootstrap/Card';
 import { FormacionesController } from '../controller/FormacionesController';
 
 function PanelCursos() {
+  const truncarTexto = (texto, longitud) => {
+    // Verifica si el texto es más largo que la longitud especificada
+    if (texto.length > longitud) {
+      return texto.slice(0, longitud) + '...'; // Trunca el texto si es más largo
+    }
+    return texto; // Devuelve el texto original si es igual o más corto
+  };
   let [arrayVista2, setArrayVista2] = useState([]);
   async function crearCartas(){
     let arrayCursos = await FormacionesController.verUltimasFormaciones();
@@ -11,8 +18,8 @@ function PanelCursos() {
       arrayCartas.push(
         <Card className='mb-4' style={{ width: '400px', height: '8rem' }}>
           <Card.Body>
-            <Card.Title>{curso.titulo}</Card.Title>
-            <Card.Text>{curso.descripcion}</Card.Text>
+            <Card.Title>{truncarTexto(curso.titulo, 100)}</Card.Title>
+            <Card.Text>{truncarTexto(curso.descripcion, 100)}</Card.Text>
           </Card.Body>
         </Card>
       )

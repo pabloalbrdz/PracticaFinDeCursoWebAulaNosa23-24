@@ -19,6 +19,7 @@ function PantallaPrincipal() {
         <BarraLateral />
         <div className="mt-5 d-flex flex-column flex-grow-1">
             {/* Contenedor de ofertas y cursos */}
+            <h1 className='m-3'>Novedades</h1>
             <PanelOfertas/>
             <PanelCursos/>
         </div>
