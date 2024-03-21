@@ -5,6 +5,7 @@ import Header from "../component/Header";
 import Footer from "../component/Footer";
 import { useEffect, useState } from "react";
 
+
 function OfertasView(){
     let [verOfertas, setVerOfertas] = useState([]);
     async function getOfertas(){
@@ -22,8 +23,6 @@ function OfertasView(){
     )
     return(
         <div id="cursosofertaspantalla" className="row vw-100">
-            {/* Header */}
-            <Header></Header>
             <main id="cursosofertaspantallaMain" className="col-12 d-flex flex-row mt-1">
                 {/* Aqui va el aside que se hara en otra tarea */}
                 <aside id="aside1" className="col-2 mt-3 h-100">
@@ -36,8 +35,6 @@ function OfertasView(){
                     </div>
                 </section>
             </main>
-
-            <Footer></Footer>
         </div>
     );
 }
