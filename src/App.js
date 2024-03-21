@@ -17,7 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Define el componente principal de la aplicación
 function App() {
-  // Si el sesion iniciada es correcta abre PantallaPrincipal y si no abre LoginPage
+  // // Si el sesion iniciada es correcta abre PantallaPrincipal y si no abre LoginPage
   if(sessionStorage.getItem("usuario") != undefined){
     return (
     <PantallaPrincipal/>
