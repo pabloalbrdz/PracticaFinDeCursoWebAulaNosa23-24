@@ -8,8 +8,9 @@ import './App.css';
 import LoginPage from "./view/Login.js";
 // Importar Pantalla Principal
 import PantallaPrincipal from "./view/PantallaPrincipal";
-// Importar Cursos Ofertas
-import CursosOfertas from './view/CursosOfertas';
+// Importar Cursos y Ofertas
+import CursosView from "./view/CursosView.js";
+import OfertasView from "./view/OfertasView.js";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
