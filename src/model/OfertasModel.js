@@ -5,7 +5,7 @@ export class OfertasModel{
 
     static async obtenerUltimasOfertas() {
         try {
-            // Realiza una llamada a la API para obtener las últimas ofertas
+            // Realiza una llamada a la API para obtener todas las ofertas
             const response = await fetch(`${ApiSettings.serverurl}/api/ofertas`, 
             {
                 method: "GET",
@@ -19,7 +19,6 @@ export class OfertasModel{
             return ofertas;
         } catch (error) {
             // Maneja errores de llamada a la API
-            console.error("Error al obtener las últimas ofertas:", error);
             return [];
         }
     }

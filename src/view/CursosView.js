@@ -3,32 +3,7 @@ import "./CursosOfertas.css";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 
-function CursosOfertas(){
-
-    // Array de ejemplo para ver como quedarian las ofertas
-    let array = new Array();
-    for (let i=1; i<=6; i++){
-        array.push(<Articulo title={i}></Articulo>);
-    }
-
-    // Ejeplo de recuperar un array con todas las ofertas y cursos
-    let ofertascursos = new Array();
-    for (let i=1; i<=150; i++){
-        ofertascursos.push(<Articulo title={i}></Articulo>);
-    }
-    
-    // Paginacion (no tiene funcionalidad, eso es otra tarea)
-    let pagina = 0;
-    let inicio = 0;
-    let final = 0;
-    let pags = new Array();
-    while(final < ofertascursos.length){
-        inicio = (pagina * 6) + 1;
-        final = Math.min((pagina + 1) * 6,ofertascursos.length);
-        pags.push(<p>{pagina + 1}</p>)
-        pagina++;
-    }
-
+function CursosView(){
     return(
         <div id="cursosofertaspantalla" className="row vw-100">
             {/* Header */}
@@ -41,7 +16,7 @@ function CursosOfertas(){
                 <section className="col-10 mt-5">
                     {/* Aqui van los cursos y ofertas */}
                     <div className="d-flex flex-column gap-2">
-                        {array}
+                        
                     </div>
                 </section>
             </main>
@@ -54,4 +29,4 @@ function CursosOfertas(){
     );
 }
 
-export default CursosOfertas;
+export default CursosView;

@@ -3,6 +3,7 @@ import { OfertasModel } from "../model/OfertasModel";
 // Clase donde almacenareos los metodos del controlador relacionados al Usuario
 export class OfertasController{
 
+    // Metodo que devuelve las ultimas ofertas
     static async obtenerUltimasOfertas() {
 
         // Llama al método del modelo para obtener todas las ofertas
@@ -21,6 +22,16 @@ export class OfertasController{
 
             return arrayUltimosDatos;
 
+        } else {
+            return [];
+        }
+    }
+
+    // Metodo que devuelve todas las ofertas
+    static async obtenerTodasOfertas(){
+        let response = await OfertasModel.obtenerUltimasOfertas();
+        if (response.errores != undefined && response.errores.length == 0) {
+            return response.ofertas;
         } else {
             return [];
         }
