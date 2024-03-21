@@ -20,10 +20,7 @@ function OfertasView(){
                     </div>
                 </section>
             </main>
-            {/* Paginacion */}
-            <div id="paginacionCursosOfertas" className="mb-2">
-                {pags}
-            </div>
+
             <Footer></Footer>
         </div>
     );

@@ -30,7 +30,7 @@ export const BarraLateral = () => {
             src={IconoUsuario} 
             width="20"
             height="20"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top mx-1"
             alt="React Bootstrap logo"
           />
           {usuario}
@@ -41,7 +41,7 @@ export const BarraLateral = () => {
             src={IconoEmail} 
             width="20"
             height="20"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top mx-1"
             alt="React Bootstrap logo"
           />
           {email}
@@ -52,7 +52,7 @@ export const BarraLateral = () => {
             src={IconoTel} 
             width="20"
             height="20"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top mx-1"
             alt="React Bootstrap logo"
           />
           {telefono}
@@ -63,7 +63,7 @@ export const BarraLateral = () => {
             src={IconoEstado} 
             width="20"
             height="20"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top mx-1"
             alt="React Bootstrap logo"
           />
           {estado}
