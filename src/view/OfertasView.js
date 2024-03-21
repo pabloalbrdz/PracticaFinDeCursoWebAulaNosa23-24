@@ -1,13 +1,9 @@
 import Articulo from "../component/Articulo";
 import "./CursosOfertas.css";
-import Header from "../component/Header";
-import Footer from "../component/Footer";
 
 function OfertasView(){
     return(
         <div id="cursosofertaspantalla" className="row vw-100">
-            {/* Header */}
-            <Header></Header>
             <main id="cursosofertaspantallaMain" className="col-12 d-flex flex-row mt-1">
                 {/* Aqui va el aside que se hara en otra tarea */}
                 <aside id="aside1" className="col-2 mt-3 h-100">
@@ -20,11 +16,6 @@ function OfertasView(){
                     </div>
                 </section>
             </main>
-            {/* Paginacion */}
-            <div id="paginacionCursosOfertas" className="mb-2">
-                {pags}
-            </div>
-            <Footer></Footer>
         </div>
     );
 }
