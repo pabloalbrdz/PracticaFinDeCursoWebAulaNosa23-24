@@ -9,26 +9,19 @@ function Header() {
         // Contenedor del Navbar
     <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="#home" className=''>
+        <Navbar.Brand>
           {/* //logo AulaNosa */}
           <img
             src={AulaNosaLogo} 
             width="100"
             height="50"
             className="d-inline-block align-top"
-            alt="React Bootstrap logo"
+            alt="Aula Nosa Logo"
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav>
-            {/* //Opciones del header */}
-          <Nav.Item>
-              <Button variant="light" className="rounded-pill text-dark me-4">Home</Button>
-            </Nav.Item>
-            <Nav.Item>
-              <Button variant="light" className="rounded-pill text-dark me-4">Link</Button>
-            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
