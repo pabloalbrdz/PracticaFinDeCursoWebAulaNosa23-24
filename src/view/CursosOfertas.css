@@ -1,4 +1,4 @@
-/* Estilo para cada articulo de las oferas/cursos */
+/* Estilo para cada artículo de las ofertas/cursos */
 #paginacionCursosOfertas > p{
     display: inline !important;
     text-align: center;
@@ -6,12 +6,35 @@
     margin-right: 2px;
 }
 
-/* Estilo para el contenido principal (barra busqueda y articulos) */
+/* Estilo para el contenido principal (barra búsqueda y artículos) */
 #cursosofertaspantallaMain{
     margin-bottom: 5%;
 }
 
 /* Estilo Aside */
+
 #aside1{
-    background-color: rgb(25, 5, 255);
+    background-color: rgb(240, 240, 240);
 }
+/* Estilo para la barra de búsqueda */
+#aside1 input[type="text"],
+#aside1 button[type="button"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Estilo para el botón */
+#aside1 button[type="button"] {
+    background-color: rgb(25, 5, 255);
+    color: white;
+    cursor: pointer;
+}
+h5{
+    margin-top: 20px;
+}
+
